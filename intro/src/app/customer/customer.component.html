@@ -1,0 +1,16 @@
+<h1>
+    
+</h1>
+
+<ul>
+    <li *ngFor="let hebele of customers" (click)="selectCustomer(hebele)">
+     kullanıcı :  {{hebele.firstName}} {{hebele.age}}
+    </li>
+</ul>
+
+<strong *ngIf="selectedCustomer ; else elseBlock">
+    {{selectedCustomer.firstName}} seçtiniz
+</strong>
+<ng-template #elseBlock>
+    Birşey seçmediniz!
+</ng-template>
